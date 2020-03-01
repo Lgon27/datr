@@ -9,7 +9,19 @@ for elem in tree.iter():
     print(elem.tag)
     print(elem.text)
 
-distanceFilter = input('How far are you willing to drive (in miles): ')
-print(distanceFilter)
-budgetFilter = input('How much are you willing to spend (in USD): ')
-print(budgetFilter)
+
+exit = False
+while(exit != True):
+    chooseActivity = input(
+        'Hello, what action would you like to take: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4) \n>>')
+
+    if(chooseActivity == '4'):
+        exit = True
+    elif(chooseActivity == '1'):
+        print('Adding Date')
+    elif(chooseActivity == '2'):
+        print('Adding Food')
+    elif(chooseActivity == '3'):
+        print('Selecting Date')
+    else:
+        print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
