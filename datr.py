@@ -19,20 +19,19 @@ while(exit != True):
     if(chooseActivity == '4'):
         exit = True
     elif(chooseActivity == '1'):
+        dateName = input('What is the name of this date?')
+        dateCost = input('What do you estimate the cost of this date to be?')
+        dateDistance = input(
+            'Is this date close(1) medium(2) far(3) epic(4) in distance?')
         print('Adding Date')
         data = {}
-        data['people'] = []
-        data['people'].append({
-            'name': 'Scott',
-            'website': 'Stackabuse.com',
-            'from': 'Nebraska'
+        data['dates'] = []
+        data['dates'].append({
+            'name': '${dateName}',
+            'cost': '${dateCost}',
+            'distance': '${dateDistance}'
         })
-        data['people'].append({
-            'name': 'Larry',
-            'website': 'google.com',
-            'from': 'Michigan'
-        })
-        with open('data.txt', 'w') as outfile:
+        with open('dates.txt', 'w') as outfile:
             json.dump(data, outfile)
     elif(chooseActivity == '2'):
         print('Adding Food')
