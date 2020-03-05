@@ -37,12 +37,14 @@ while(exit != True):
         print('Adding Food')
     elif(chooseActivity == '3'):
         print('Selecting Date')
-        with open('data.txt') as json_file:
+        with open('dates.txt') as json_file:
             data = json.load(json_file)
-            for p in data['people']:
+            for p in data['dates']:
                 print('Name: ' + p['name'])
-                print('Website: ' + p['website'])
-                print('From: ' + p['from'])
+                print('Cost: ' + p['cost'])
+                print('Distance: ' + p['distance'])
                 print('')
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
+
+# Made some minor changes in regards to data file names. Error when reading and writing data to file currently exists. I must fix it to write the users inputed data to the file and to properly read that data back
