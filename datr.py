@@ -27,9 +27,9 @@ while(exit != True):
         data = {}
         data['dates'] = []
         data['dates'].append({
-            'name': '${dateName}',
-            'cost': '${dateCost}',
-            'distance': '${dateDistance}'
+            'name': dateName,
+            'cost': dateCost,
+            'distance': dateDistance
         })
         with open('dates.txt', 'w') as outfile:
             json.dump(data, outfile)
