@@ -47,4 +47,4 @@ while(exit != True):
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
 
-# Made some minor changes in regards to data file names. Error when reading and writing data to file currently exists. I must fix it to write the users inputed data to the file and to properly read that data back
+# Adding dates works now!
