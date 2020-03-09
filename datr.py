@@ -1,5 +1,10 @@
 import json
 
+# algorithm for randomization: first draf
+# for loop that reads from json should use filters when selecting. Store filtered elements in array.
+# Randomize from 0 - size of array pick date like that.
+# Similar concept for food.
+
 
 def chooseDate(priceFilter, distanceFilter):
     with open('dates.txt') as json_file:
@@ -34,7 +39,7 @@ while(exit != True):
             'cost': dateCost,
             'distance': dateDistance
         })
-        with open('dates.txt', 'w') as outfile:
+        with open('dates.txt', 'a') as outfile:
             json.dump(data, outfile)
     elif(chooseActivity == '2'):
         print('Adding Food')
@@ -44,14 +49,7 @@ while(exit != True):
             'What is your date budget (NOTE: this excludes the food budget)')
         distanceFilter = input(
             'How far are you willing to travel for this date? \n Close  (1) \n Medium (2)\n Far    (3) \n Epic   (4)')
-
         chooseDate(priceFilter, distanceFilter)
-
-        # algorithm for randomization: first draf
-        # for loop that reads from json should use filters when selecting. Store filtered elements in array.
-        # Randomize from 0 - size of array pick date like that.
-        # Similar concept for food.
-
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
 
