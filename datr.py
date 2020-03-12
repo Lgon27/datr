@@ -19,6 +19,10 @@ def chooseDate(priceFilter, distanceFilter):
           ' dollars ' 'and is a ' + distanceFilter + ' distance away')
 
 
+def addDate(name, cost, distance):
+    print('Adding Date')
+
+
 exit = False
 while(exit != True):
     chooseActivity = input(
