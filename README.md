@@ -18,6 +18,8 @@ JSON (JavaScript Object Notation) is used to represent hierarchical data and mak
 This data format supports hierarchical data and is incredibly useful for web applications due to similar notation to JavaScript objects. Json also tends to be smaller
 than XML.
 
+It seems like updating a JSON file you already have is one of the more difficult problems sorrounding JSON
+
 XML (extensible markup language) is a human readable hierarchical data tye introduced in 1996. It's syntax makes use of angle brackets and backslashes
 to denote hierarchy. Pro's: This format is very human readable. However, it is probably the largest of the three because of it's syntax.
 
@@ -30,7 +32,12 @@ If i ever choose to extend this project into some kind of web application, JSON 
 However, local storage using JSON can be a tricky. To understand this concept better I used the following tutorial: 
 https://www.youtube.com/watch?v=9N6a-VLBa2I
 
+https://www.youtube.com/watch?v=QrRcZmDaO_I : Video on how to appends
 
+As per the above video, I was able to the JSON file by storing the context of the JSON file to a
+list and appending a new json object to that list before writing the content of the list back to
+the JSON file. Having to store the entire JSON file in a list just to append 1 object is fairly
+inneficient in terms of space with space complexity being O(N) were N is the number of dates a user has stored. However, for the purpose of this project this is probably okay as the average user is probably not storing hundreds or thousands of date ideas here.
 
 # future goals
 The initial scope of this project is limited to a simple command line application that stores date and dining data locally.
