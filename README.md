@@ -40,7 +40,10 @@ the JSON file. Having to store the entire JSON file in a list just to append 1 o
 inneficient in terms of space with space complexity being O(N) were N is the number of dates a user has stored. However, for the purpose of this project this is probably okay as the average user is probably not storing hundreds or thousands of date ideas here.
 
 # choosing dates
-TODO: Fill this section
+Randomly picking a date was pretty straight forward. The user enters criteria for the date and the algorithm
+searches through the JSON file for dates that meet that given criteria. Elligable dates are stored in a list.
+Afterwards, using a random number the algorithm picks one of the elligable dates out of the list and presents it
+to the user. Lastly, the user is given the option to pick again.
 
 # future goals
 The initial scope of this project is limited to a simple command line application that stores date and dining data locally.
