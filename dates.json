@@ -1,0 +1,24 @@
+{
+    "dates": [
+        {
+            "event": "Quarantine Hangout",
+            "cost": 32,
+            "distance": 1
+        },
+        {
+            "event": "Movie Theatre",
+            "cost": 14,
+            "distance": 2
+        },
+        {
+            "event": "Beach",
+            "cost": 0,
+            "distance": 2
+        },
+        {
+            "event": "Quarantini Party",
+            "cost": 30,
+            "distance": 1
+        }
+    ]
+}
