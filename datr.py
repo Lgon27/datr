@@ -1,4 +1,5 @@
 import json
+import random
 
 # algorithm for randomization: first draf
 # for loop that reads from json should use filters when selecting. Store filtered elements in array.
@@ -22,8 +23,14 @@ def chooseDate(priceFilter, distanceFilter):
         for p in acceptedDates:  # TODO, randomly pick from one of these elligable dates
             print(p)
 
-    print('You are going on a date that costs no more than ' + priceFilter +
-          ' dollars ' 'and is a ' + distanceFilter + ' distance away')
+        range = len(acceptedDates)
+        exit = False
+        while(True):
+            date = acceptedDates[random.randrange(range)]
+            print('Chosen Date: ' + date['event'])
+            choice = input('Choose Again? Yes(1) No(2)')
+            if(int(choice) == 2):
+                break
 
 
 def write_json(data, filename="dates.json"):  # Helper method to Write back to the file
@@ -68,6 +75,3 @@ while(exit != True):
         chooseDate(priceFilter, distanceFilter)
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
-
-# Adding dates works now! (For real this time)
-# TODO: Pick Date option & Creating a new option to delete a date
