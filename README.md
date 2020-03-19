@@ -39,6 +39,9 @@ list and appending a new json object to that list before writing the content of 
 the JSON file. Having to store the entire JSON file in a list just to append 1 object is fairly
 inneficient in terms of space with space complexity being O(N) were N is the number of dates a user has stored. However, for the purpose of this project this is probably okay as the average user is probably not storing hundreds or thousands of date ideas here.
 
+# choosing dates
+TODO: Fill this section
+
 # future goals
 The initial scope of this project is limited to a simple command line application that stores date and dining data locally.
 In the future it might be expanded to allow online storage and backup of this data. 
