@@ -52,9 +52,9 @@ exit = False
 while(exit != True):
 
     chooseActivity = input(
-        'Hello, what action would you like to take: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4) \n>>')
+        'Hello, what action would you like to take: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Delete    (4) \n Exit      (5)\n>>')
 
-    if(chooseActivity == '4'):  # Exit
+    if(chooseActivity == '5'):  # Exit
         exit = True
     elif(chooseActivity == '1'):  # Add Date
         dateName = input('What is the name of this date?')
@@ -73,5 +73,9 @@ while(exit != True):
         distanceFilter = input(
             'How far are you willing to travel for this date? \n Close  (1) \n Medium (2)\n Far    (3) \n Epic   (4)')
         chooseDate(priceFilter, distanceFilter)
+    elif(chooseActivity == '4'):
+        print('Deleting ')
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
+
+# TODO: Learn how to make this application a GUI application
