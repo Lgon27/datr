@@ -7,10 +7,12 @@ import random
 # Similar concept for food.
 
 
-def chooseDate(priceFilter, distanceFilter):
+def chooseDate(priceFilter, distanceFilter, foodCostFilter):
+    acceptedDates = []
+    acceptedFoods = []
     with open('dates.json') as json_file:
         data = json.load(json_file)
-        acceptedDates = []
+
         for p in data['dates']:
             print('Name: ' + p['event'])
             print('Cost: ' + str(p['cost']))
@@ -20,20 +22,42 @@ def chooseDate(priceFilter, distanceFilter):
             if(p['cost'] <= int(priceFilter) and p['distance'] <= int(distanceFilter)):
                 acceptedDates.append(p)
 
-        for p in acceptedDates:  # TODO, randomly pick from one of these elligable dates
+        for p in acceptedDates:
             print(p)
 
-        range = len(acceptedDates)
+    with open('food.json') as json_file:
+        data = json.load(json_file)
+
+        for p in data['foods']:
+            print('Name: ' + p['food'])
+            print('Cost: ' + str(p['costPerPerson']))
+
+            if(p['costPerPerson'] <= int(foodCostFilter)):
+                acceptedFoods.append(p)
+
+        for p in acceptedFoods:
+            print(p)
+
+        dateRange = len(acceptedDates)
+        foodRange = len(acceptedFoods)
         exit = False
         while(True):
-            date = acceptedDates[random.randrange(range)]
-            print('Chosen Date: ' + date['event'])
+            date = acceptedDates[random.randrange(dateRange)]
+            food = acceptedFoods[random.randrange(foodRange)]
+            print('Chosen Date: ' + date['event'] +
+                  ' Chosen Food: ' + food['food'])
             choice = input('Choose Again? Yes(1) No(2)')
             if(int(choice) == 2):
                 break
 
 
-def write_json(data, filename="dates.json"):  # Helper method to Write back to the file
+# Helper methods to Write back to the file
+def write_jsonDate(data, filename="dates.json"):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
+
+def write_jsonFood(data, filename="food.json"):
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
@@ -45,7 +69,18 @@ def addDate(name, cost, distance):  # Helper method that appends a JSON object t
         y = {"event": name, "cost": int(cost), "distance": int(distance)}
         temp.append(y)
 
-    write_json(data)
+    write_jsonDate(data)
+
+
+def addFood(name, cost):  # Helper method that appends a JSON object to the food file
+    with open("food.json") as json_file:
+        data = json.load(json_file)
+        temp = data["foods"]
+        y = {"food": name, "costPerPerson": int(
+            cost)}
+        temp.append(y)
+
+    write_jsonFood(data)
 
 
 exit = False
@@ -66,16 +101,25 @@ while(exit != True):
         addDate(dateName, dateCost, dateDistance)
     elif(chooseActivity == '2'):  # Add Food
         print('Adding Food')
+        foodName = input('What is the name of this meal?')
+        foodCost = input(
+            'What do you estimate the cost of this meal to be per person? ')
+        print('Adding Food')
+
+        addFood(foodName, foodCost)
     elif(chooseActivity == '3'):  # Select a random date TODO: pretty much all of this method
         print('Selecting Date')
         priceFilter = input(
             'What is your date budget (NOTE: this excludes the food budget)')
         distanceFilter = input(
             'How far are you willing to travel for this date? \n Close  (1) \n Medium (2)\n Far    (3) \n Epic   (4)')
-        chooseDate(priceFilter, distanceFilter)
+        foodCostFilter = input('How much are you willing to spend on food?')
+        chooseDate(priceFilter, distanceFilter, foodCostFilter)
     elif(chooseActivity == '4'):
         print('Deleting ')
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
 
 # TODO: Learn how to make this application a GUI application
+# TODO: Delete Date & Delete Food
+# TODO: Expand Date Picking to also pick a random food
