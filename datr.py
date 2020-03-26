@@ -72,15 +72,12 @@ def addDate(name, cost, distance):  # Helper method that appends a JSON object t
     write_jsonDate(data)
 
 
-def deleteDate(name):  # Contains bug which breaks the JSON file
+def deleteDate(name):
     with open("dates.json") as json_file:
         datat = json.load(json_file)
         data = datat["dates"]
-        print(data)
 
         for i in range(len(data)):
-            print(i)
-            print("\n")
             if data[i]["event"] == name:
                 data.pop(i)
                 break
@@ -132,8 +129,9 @@ while(exit != True):
         foodCostFilter = input('How much are you willing to spend on food?')
         chooseDate(priceFilter, distanceFilter, foodCostFilter)
     elif(chooseActivity == '4'):
-        print('Deleting ')
-        deleteDate('Beach')
+        toBeDeleted = input("What event would you like to delete?")
+        print('Deleting: ' + toBeDeleted)
+        deleteDate(toBeDeleted)
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
 

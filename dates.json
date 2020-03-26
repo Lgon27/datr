@@ -9,11 +9,6 @@
             "event": "Movie Theatre",
             "cost": 14,
             "distance": 2
-        },
-        {
-            "event": "Quarantini Party",
-            "cost": 30,
-            "distance": 1
         }
     ]
 }
