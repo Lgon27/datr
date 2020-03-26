@@ -11,11 +11,6 @@
             "distance": 2
         },
         {
-            "event": "Beach",
-            "cost": 0,
-            "distance": 2
-        },
-        {
             "event": "Quarantini Party",
             "cost": 30,
             "distance": 1

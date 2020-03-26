@@ -72,6 +72,22 @@ def addDate(name, cost, distance):  # Helper method that appends a JSON object t
     write_jsonDate(data)
 
 
+def deleteDate(name):  # Contains bug which breaks the JSON file
+    with open("dates.json") as json_file:
+        datat = json.load(json_file)
+        data = datat["dates"]
+        print(data)
+
+        for i in range(len(data)):
+            print(i)
+            print("\n")
+            if data[i]["event"] == name:
+                data.pop(i)
+                break
+
+    write_jsonDate(datat)
+
+
 def addFood(name, cost):  # Helper method that appends a JSON object to the food file
     with open("food.json") as json_file:
         data = json.load(json_file)
@@ -117,9 +133,9 @@ while(exit != True):
         chooseDate(priceFilter, distanceFilter, foodCostFilter)
     elif(chooseActivity == '4'):
         print('Deleting ')
+        deleteDate('Beach')
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
 
 # TODO: Learn how to make this application a GUI application
 # TODO: Delete Date & Delete Food
-# TODO: Expand Date Picking to also pick a random food
