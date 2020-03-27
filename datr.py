@@ -85,6 +85,9 @@ def deleteDate(name):
     write_jsonDate(datat)
 
 
+def deleteFood(food):  # TODO: finish this method
+
+
 def addFood(name, cost):  # Helper method that appends a JSON object to the food file
     with open("food.json") as json_file:
         data = json.load(json_file)
@@ -130,6 +133,7 @@ while(exit != True):
         chooseDate(priceFilter, distanceFilter, foodCostFilter)
     elif(chooseActivity == '4'):
         toBeDeleted = input("What event would you like to delete?")
+        # TODO: Allow users to choose what category to delete from (Date/Food)
         print('Deleting: ' + toBeDeleted)
         deleteDate(toBeDeleted)
     else:
