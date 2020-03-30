@@ -45,6 +45,9 @@ searches through the JSON file for dates that meet that given criteria. Elligabl
 Afterwards, using a random number the algorithm picks one of the elligable dates out of the list and presents it
 to the user. Lastly, the user is given the option to pick again.
 
+# deleting dates
+Deleting the date was fairly straight forward. The user enters the name of a date or of a food to delete. The software then calls a helper method which stores the contents of either the food or dates json file in a list. It then searches that list until the value which matches the parameter that the user entered is found. Once found it pops that value from the list and writes the contents of the list back to the JSON file.
+
 # future goals
 The initial scope of this project is limited to a simple command line application that stores date and dining data locally.
 In the future it might be expanded to allow online storage and backup of this data. 
