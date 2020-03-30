@@ -4,11 +4,6 @@
             "event": "Quarantine Hangout",
             "cost": 32,
             "distance": 1
-        },
-        {
-            "event": "Movie Theatre",
-            "cost": 14,
-            "distance": 2
         }
     ]
 }

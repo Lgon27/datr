@@ -142,10 +142,17 @@ while(exit != True):
         foodCostFilter = input('How much are you willing to spend on food?')
         chooseDate(priceFilter, distanceFilter, foodCostFilter)
     elif(chooseActivity == '4'):
-        toBeDeleted = input("What food would you like to delete?")
-        # TODO: Allow users to choose what category to delete from (Date/Food)
-        print('Deleting: ' + toBeDeleted)
-        deleteFood(toBeDeleted)
+        deleteChoice = input(
+            "What would you like to delete? \n Date  (1) \n Food  (2)")
+
+        if(deleteChoice == '1'):
+            datetodelete = input("What date would you like to delete?")
+            deleteDate(datetodelete)
+        elif(deleteChoice == '2'):
+            foodtodelete = input("What food would you like to delete")
+            deleteFood(foodtodelete)
+        else:
+            print('Invalid input. Must be (1) or (2)')
     else:
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
 

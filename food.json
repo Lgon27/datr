@@ -1,10 +1,6 @@
 {
     "foods": [
         {
-            "food": "Burger King",
-            "costPerPerson": 15
-        },
-        {
             "food": "Bocas House",
             "costPerPerson": 30
         }
