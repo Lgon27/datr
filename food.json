@@ -1,10 +1,6 @@
 {
     "foods": [
         {
-            "food": "McDonalds",
-            "costPerPerson": 10
-        },
-        {
             "food": "Burger King",
             "costPerPerson": 15
         },
