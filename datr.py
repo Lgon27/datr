@@ -50,8 +50,41 @@ def chooseDate(priceFilter, distanceFilter, foodCostFilter):
             if(int(choice) == 2):
                 break
 
+# The following two functions will be used to display the user data in a list format (Will be exanded when the GUI is made)
 
-# Helper methods to Write back to the file
+
+def displayDates():
+    print('TODO')
+
+
+def displayFoods():
+    print('TODO')
+
+    # The following helper functions will handle sorting into various formats
+
+
+def sortDistanceDates():
+    print('TODO')
+
+
+def sortPriceDates():
+    print('TODO')
+
+
+def sortAlphabeticallyDates():
+    print('TODO')
+
+
+def sortPriceFoods():
+    print('TODO')
+
+
+def sortAlphabeticallyFood():
+    print('TODO')
+
+    # Helper methods to Write back to the file
+
+
 def write_jsonDate(data, filename="dates.json"):
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
