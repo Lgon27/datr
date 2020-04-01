@@ -50,38 +50,6 @@ def chooseDate(priceFilter, distanceFilter, foodCostFilter):
             if(int(choice) == 2):
                 break
 
-# The following two functions will be used to display the user data in a list format (Will be exanded when the GUI is made)
-
-
-def displayDates():
-    print('TODO')
-
-
-def displayFoods():
-    print('TODO')
-
-    # The following helper functions will handle sorting into various formats
-
-
-def sortDistanceDates():
-    print('TODO')
-
-
-def sortPriceDates():
-    print('TODO')
-
-
-def sortAlphabeticallyDates():
-    print('TODO')
-
-
-def sortPriceFoods():
-    print('TODO')
-
-
-def sortAlphabeticallyFood():
-    print('TODO')
-
     # Helper methods to Write back to the file
 
 
@@ -140,6 +108,50 @@ def addFood(name, cost):  # Helper method that appends a JSON object to the food
         temp.append(y)
 
     write_jsonFood(data)
+
+    displayFoods()
+
+# The following two functions will be used to display the user data in a list format (Will be exanded when the GUI is made)
+
+
+def displayDates():
+    with open("dates.json") as json_file:
+        data = json.load(json_file)
+        dataList = data["dates"]
+
+        for x in dataList:
+            print(x)
+
+
+def displayFoods():
+    with open("food.json") as json_file:
+        data = json.load(json_file)
+        dataList = data["foods"]
+
+        for x in dataList:
+            print(x)
+
+    # The following helper functions will handle sorting into various formats
+
+
+def sortDistanceDates():
+    print('TODO')
+
+
+def sortPriceDates():
+    print('TODO')
+
+
+def sortAlphabeticallyDates():
+    print('TODO')
+
+
+def sortPriceFoods():
+    print('TODO')
+
+
+def sortAlphabeticallyFood():
+    print('TODO')
 
 
 exit = False

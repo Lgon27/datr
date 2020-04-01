@@ -3,6 +3,14 @@
         {
             "food": "Bocas House",
             "costPerPerson": 30
+        },
+        {
+            "food": "McDonalds",
+            "costPerPerson": 10
+        },
+        {
+            "food": "Subway",
+            "costPerPerson": 10
         }
     ]
 }

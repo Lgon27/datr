@@ -4,6 +4,11 @@
             "event": "Quarantine Hangout",
             "cost": 32,
             "distance": 1
+        },
+        {
+            "event": "Ice Skating",
+            "cost": 25,
+            "distance": 1
         }
     ]
 }
