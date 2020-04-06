@@ -86,8 +86,8 @@ def deleteDate(name):
     write_jsonDate(datat)
 
 
-def deleteFood(food):  # TODO: finish this method
-    with open("food.json") as json_file:
+def deleteFood(food):
+   with open("food.json") as json_file:
         datat = json.load(json_file)
         data = datat["foods"]
 

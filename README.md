@@ -49,7 +49,7 @@ to the user. Lastly, the user is given the option to pick again.
 Deleting the dates was fairly straight forward. The user enters the name of a date or of a food to delete. The software then calls a helper method which stores the contents of either the food or dates json file in a list. It then searches that list until the value which matches the parameter that the user entered is found. Once found it pops that value from the list and writes the contents of the list back to the JSON file.
 
 # sorting dates & foods
-TODO: Finish sorting methods
+Ideally I would like to provide a function so that the contents of the JSON files are displayed in a sorted manner to the user. I imagine this might be beneficial when I eventually transition this application from a terminal based application to some kind of user interface.
 
 # future goals
 The initial scope of this project is limited to a simple command line application that stores date and dining data locally.
