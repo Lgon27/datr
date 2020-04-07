@@ -11,6 +11,10 @@
         {
             "food": "Subway",
             "costPerPerson": 10
+        },
+        {
+            "food": "Cheesecake Factory",
+            "costPerPerson": 20
         }
     ]
 }

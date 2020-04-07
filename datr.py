@@ -87,7 +87,7 @@ def deleteDate(name):
 
 
 def deleteFood(food):
-   with open("food.json") as json_file:
+    with open("food.json") as json_file:
         datat = json.load(json_file)
         data = datat["foods"]
 
@@ -96,7 +96,7 @@ def deleteFood(food):
                 data.pop(i)
                 break
 
-    write_jsonFood(datat)
+        write_jsonFood(datat)
 
 
 def addFood(name, cost):  # Helper method that appends a JSON object to the food file
@@ -136,6 +136,14 @@ def displayFoods():
 
 def sortDistanceDates():
     print('TODO')
+    with open("food.json") as json_file:
+        data = json.load(json_file)
+        dataList = data["foods"]
+
+        i = 0
+        while i < len(dataList):
+            print(dataList[i]["costPerPerson"])
+            i = i+1
 
 
 def sortPriceDates():
@@ -162,6 +170,7 @@ while(exit != True):
 
     if(chooseActivity == '5'):  # Exit
         exit = True
+        print(sortDistanceDates())
     elif(chooseActivity == '1'):  # Add Date
         dateName = input('What is the name of this date?')
         dateCost = input('What do you estimate the cost of this date to be?')
