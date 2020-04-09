@@ -134,16 +134,22 @@ def displayFoods():
     # The following helper functions will handle sorting into various formats
 
 
-def sortDistanceDates():
-    print('TODO')
+def sortPriceFoods():  # Uses selection sort to sort the list of foods by price
     with open("food.json") as json_file:
         data = json.load(json_file)
         dataList = data["foods"]
 
-        i = 0
-        while i < len(dataList):
-            print(dataList[i]["costPerPerson"])
-            i = i+1
+        for i in range(len(dataList)):  # Loop to search through the unsorted subarray
+            min = i  # Initiaties the minimum element to the first element of the unsorted subarray
+            # Searching the unsorted subarray for the smallest value
+            for j in range(i + 1, len(dataList)):
+                if dataList[min]["costPerPerson"] > dataList[j]["costPerPerson"]:
+                    min = j  # If a smaller value is found, the minimum is set to the index of that new smallest value
+
+            # Swapping the minimum elements
+            # Appending the smallest element in the unsorted sub array to the sorted sub array
+            dataList[i], dataList[min] = dataList[min], dataList[i]
+        print(dataList)
 
 
 def sortPriceDates():
@@ -154,7 +160,7 @@ def sortAlphabeticallyDates():
     print('TODO')
 
 
-def sortPriceFoods():
+def sortDistanceDates():
     print('TODO')
 
 

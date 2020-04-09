@@ -1,10 +1,6 @@
 {
     "foods": [
         {
-            "food": "Bocas House",
-            "costPerPerson": 30
-        },
-        {
             "food": "McDonalds",
             "costPerPerson": 10
         },
@@ -15,6 +11,26 @@
         {
             "food": "Cheesecake Factory",
             "costPerPerson": 20
+        },
+        {
+            "food": "Bocas House",
+            "costPerPerson": 30
+        },
+        {
+            "food": "The Knife",
+            "costPerPerson": 30
+        },
+        {
+            "food": "Lamar",
+            "costPerPerson": 40
+        },
+        {
+            "food": "Nobu",
+            "costPerPerson": 50
+        },
+        {
+            "food": "Barton G's",
+            "costPerPerson": 60
         }
     ]
 }
