@@ -176,7 +176,7 @@ while(exit != True):
 
     if(chooseActivity == '5'):  # Exit
         exit = True
-        print(sortNumerical("dates", "cost"))
+        print(sortNumerical("dates", "event"))
     elif(chooseActivity == '1'):  # Add Date
         dateName = input('What is the name of this date?')
         dateCost = input('What do you estimate the cost of this date to be?')

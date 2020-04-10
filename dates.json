@@ -9,6 +9,21 @@
             "event": "Ice Skating",
             "cost": 25,
             "distance": 1
+        },
+        {
+            "event": "Bill Bags",
+            "cost": 15,
+            "distance": 3
+        },
+        {
+            "event": "Dadeland",
+            "cost": 20,
+            "distance": 2
+        },
+        {
+            "event": "Basketball",
+            "cost": 0,
+            "distance": 1
         }
     ]
 }
