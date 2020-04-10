@@ -1,5 +1,9 @@
 {
-    "foods": [
+    "food": [
+        {
+            "food": "Bocas House",
+            "costPerPerson": 30
+        },
         {
             "food": "McDonalds",
             "costPerPerson": 10
@@ -13,8 +17,12 @@
             "costPerPerson": 20
         },
         {
-            "food": "Bocas House",
-            "costPerPerson": 30
+            "food": "Nobu",
+            "costPerPerson": 50
+        },
+        {
+            "food": "Barton G's",
+            "costPerPerson": 60
         },
         {
             "food": "The Knife",
@@ -25,12 +33,8 @@
             "costPerPerson": 40
         },
         {
-            "food": "Nobu",
-            "costPerPerson": 50
-        },
-        {
-            "food": "Barton G's",
-            "costPerPerson": 60
+            "food": "Pepinos",
+            "costPerPerson": 35
         }
     ]
 }

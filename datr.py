@@ -28,7 +28,7 @@ def chooseDate(priceFilter, distanceFilter, foodCostFilter):
     with open('food.json') as json_file:
         data = json.load(json_file)
 
-        for p in data['foods']:
+        for p in data['food']:
             print('Name: ' + p['food'])
             print('Cost: ' + str(p['costPerPerson']))
 
@@ -89,7 +89,7 @@ def deleteDate(name):
 def deleteFood(food):
     with open("food.json") as json_file:
         datat = json.load(json_file)
-        data = datat["foods"]
+        data = datat["food"]
 
         for i in range(len(data)):
             if data[i]["food"] == food:
@@ -102,7 +102,7 @@ def deleteFood(food):
 def addFood(name, cost):  # Helper method that appends a JSON object to the food file
     with open("food.json") as json_file:
         data = json.load(json_file)
-        temp = data["foods"]
+        temp = data["food"]
         y = {"food": name, "costPerPerson": int(
             cost)}
         temp.append(y)
@@ -126,7 +126,7 @@ def displayDates():
 def displayFoods():
     with open("food.json") as json_file:
         data = json.load(json_file)
-        dataList = data["foods"]
+        dataList = data["food"]
 
         for x in dataList:
             print(x)
@@ -134,16 +134,16 @@ def displayFoods():
     # The following helper functions will handle sorting into various formats
 
 
-def sortPriceFoods():  # Uses selection sort to sort the list of foods by price
-    with open("food.json") as json_file:
+def sortNumerical(key, field):  # Uses selection sort to sort the list of foods by price
+    with open(key + ".json") as json_file:
         data = json.load(json_file)
-        dataList = data["foods"]
+        dataList = data[key]
 
         for i in range(len(dataList)):  # Loop to search through the unsorted subarray
             min = i  # Initiaties the minimum element to the first element of the unsorted subarray
             # Searching the unsorted subarray for the smallest value
             for j in range(i + 1, len(dataList)):
-                if dataList[min]["costPerPerson"] > dataList[j]["costPerPerson"]:
+                if dataList[min][field] > dataList[j][field]:
                     min = j  # If a smaller value is found, the minimum is set to the index of that new smallest value
 
             # Swapping the minimum elements
@@ -176,7 +176,7 @@ while(exit != True):
 
     if(chooseActivity == '5'):  # Exit
         exit = True
-        print(sortDistanceDates())
+        print(sortNumerical("dates", "cost"))
     elif(chooseActivity == '1'):  # Add Date
         dateName = input('What is the name of this date?')
         dateCost = input('What do you estimate the cost of this date to be?')
