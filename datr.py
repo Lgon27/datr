@@ -134,7 +134,7 @@ def displayFoods():
     # The following helper functions will handle sorting into various formats
 
 
-def sortNumerical(key, field):  # Uses selection sort to sort the list of foods by price
+def sortByField(key, field):  # Uses selection sort to sort the list of foods by price
     with open(key + ".json") as json_file:
         data = json.load(json_file)
         dataList = data[key]
@@ -152,22 +152,6 @@ def sortNumerical(key, field):  # Uses selection sort to sort the list of foods 
         print(dataList)
 
 
-def sortPriceDates():
-    print('TODO')
-
-
-def sortAlphabeticallyDates():
-    print('TODO')
-
-
-def sortDistanceDates():
-    print('TODO')
-
-
-def sortAlphabeticallyFood():
-    print('TODO')
-
-
 exit = False
 while(exit != True):
 
@@ -176,7 +160,7 @@ while(exit != True):
 
     if(chooseActivity == '5'):  # Exit
         exit = True
-        print(sortNumerical("dates", "event"))
+        print(sortByField("dates", "event"))
     elif(chooseActivity == '1'):  # Add Date
         dateName = input('What is the name of this date?')
         dateCost = input('What do you estimate the cost of this date to be?')
