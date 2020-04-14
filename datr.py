@@ -201,4 +201,3 @@ while(exit != True):
         print('Incorrect input: Valid input is: \n Add Date  (1) \n Add Food  (2) \n Pick Date (3)\n Exit      (4)')
 
 # TODO: Learn how to make this application a GUI application
-# TODO: Delete Date & Delete Food
