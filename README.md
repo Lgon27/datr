@@ -53,8 +53,7 @@ Ideally I would like to provide a function so that the contents of the JSON file
 
 # future goals
 The initial scope of this project is limited to a simple command line application that stores date and dining data locally.
-In the future it might be expanded to allow online storage and backup of this data. 
-Ultimately the end goal of this project would be to incorporate some kind of technology or algorithm that identifies date ideas
-automatically without the user having to enter their own.
+However, I am now working to make it a gui application
+Ultimately the end goal of this project would be to incorporate some kind of technology or algorithm that identifies date ideas automatically without the user having to enter their own.
 
 https://ezinearticles.com/?CSV-vs-XML-vs-JSON---Which-is-the-Best-Response-Data-Format?&id=4073117
