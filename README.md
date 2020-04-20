@@ -52,7 +52,8 @@ Deleting the dates was fairly straight forward. The user enters the name of a da
 Ideally I would like to provide a function so that the contents of the JSON files are displayed in a sorted manner to the user. I imagine this might be beneficial when I eventually transition this application from a terminal based application to some kind of user interface.
 
 # UI Work
-I began working on the UI using the python tkinter library. 
+I began working on the UI using the python tkinter library. Below are some mockups of the initial idea
+i had for the UI. However, this is subject to change as the project evolves.
 
 # UI Mockups 
 ![Home Image](/Mockups/Home.png)
