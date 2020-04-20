@@ -51,6 +51,14 @@ Deleting the dates was fairly straight forward. The user enters the name of a da
 # sorting dates & foods
 Ideally I would like to provide a function so that the contents of the JSON files are displayed in a sorted manner to the user. I imagine this might be beneficial when I eventually transition this application from a terminal based application to some kind of user interface.
 
+# UI Work
+I began working on the UI using the python tkinter library. 
+
+# UI Mockups 
+![Home Image](/Mockups/Home.png)
+![Home Image](/Mockups/Manage_Dates.png)
+![Home Image](/Mockups/Manage_Foods.png)
+
 # future goals
 The initial scope of this project is limited to a simple command line application that stores date and dining data locally.
 However, I am now working to make it a gui application
