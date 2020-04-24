@@ -19,6 +19,9 @@ tab_control.add(tab3, text='Manage Food')
 
 lbl1 = Label(tab1, text='Generate Date')
 lbl1.grid(column=0, row=0)
+genDateButton = Button(lbl1, text="Generate Date")
+genDateButton.grid(column=1, row=0)
+
 
 lbl2 = Label(tab2, text='Manage Dates')
 lbl2.grid(column=0, row=0)
