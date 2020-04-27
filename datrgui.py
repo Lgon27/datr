@@ -1,35 +1,71 @@
 from tkinter import *
 from tkinter import ttk
 
-window = Tk()
-# window.config(height=500, width=500)
-window.title("Datr")
 
-tab_control = ttk.Notebook(window)
-window.geometry('960x720')
+class App(Tk):
+    def __init__(self):
+        super(App, self).__init__()
 
-tab1 = ttk.Frame(tab_control)
-tab2 = ttk.Frame(tab_control)
-tab3 = ttk.Frame(tab_control)
+        self.title("Datr")
+        self.minsize(600, 400)
 
-tab_control.add(tab1, text='Home')
-tab_control.add(tab2, text='Manage Dates')
-tab_control.add(tab3, text='Manage Food')
+        tabControl = ttk.Notebook(self)
+        self.tab1 = ttk.Frame(tabControl)
+        tabControl.add(self.tab1, text="Home")
+
+        self.tab2 = ttk.Frame(tabControl)
+        tabControl.add(self.tab2, text="Manage Dates")
+
+        self.tab3 = ttk.Frame(tabControl)
+        tabControl.add(self.tab3, text="Manage Foods")
+
+        tabControl.pack(expand=1, fill="both")
+
+        self.widgets()
+
+    def widgets(self):
+
+        labelFrameHome = LabelFrame(self.tab1, text="Generate Date")
+        labelFrameHome.grid(column=0, row=0, padx=8, pady=4)
+
+        labelFrame = LabelFrame(self.tab2, text="First Tab")
+        labelFrame.grid(column=0, row=0, padx=8, pady=4)
+
+        btn1 = Button(labelFrameHome, text='Randomize')
+        btn1.grid(column=0, row=0, padx=4, pady=2)
+
+        labelFrameHome2 = LabelFrame(self.tab1, text="Generate Date")
+        labelFrameHome2.grid(column=1, row=0, padx=8, pady=4)
+
+        btn2 = Button(labelFrameHome2, text='Randomize')
+        btn2.grid(column=0, row=0, padx=4, pady=2)
+        label = Label(labelFrame, text="Enter Your Name:")
+        label.grid(column=0, row=0, sticky='W')
+
+        textEdit = Entry(labelFrame, width=20)
+        textEdit.grid(column=1, row=0)
+
+        label2 = Label(labelFrame, text="Enter Your Password:")
+        label2.grid(column=0, row=1)
+
+        textEdit = Entry(labelFrame, width=20)
+        textEdit.grid(column=1, row=1)
+
+        labelFrame2 = LabelFrame(self.tab3, text="Second Tab")
+        labelFrame2.grid(column=0, row=0, padx=8, pady=4)
+
+        label = Label(labelFrame2, text="Enter Your Name:")
+        label.grid(column=0, row=0, sticky='W')
+
+        textEdit = Entry(labelFrame2, width=20)
+        textEdit.grid(column=1, row=0)
+
+        label2 = Label(labelFrame2, text="Enter Your Password:")
+        label2.grid(column=0, row=1)
+
+        textEdit = Entry(labelFrame2, width=20)
+        textEdit.grid(column=1, row=1)
 
 
-lbl1 = Label(tab1, text='Generate Date')
-lbl1.grid(column=0, row=0)
-genDateButton = Button(lbl1, text="Generate Date")
-genDateButton.grid(column=1, row=0)
-
-
-lbl2 = Label(tab2, text='Manage Dates')
-lbl2.grid(column=0, row=0)
-
-lbl3 = Label(tab3, text='Manage Food')
-lbl3.grid(column=0, row=0)
-
-
-tab_control.pack(expand=1, fill='both')
-
-window.mainloop()
+app = App()
+app.mainloop()

@@ -55,6 +55,8 @@ Ideally I would like to provide a function so that the contents of the JSON file
 I began working on the UI using the python tkinter library. Below are some mockups of the initial idea
 i had for the UI. However, this is subject to change as the project evolves.
 
+https://codeloop.org/how-to-add-widgets-in-python-tkinter-tabwidget/
+
 # UI Mockups 
 ![Home Image](/Mockups/Home.png)
 ![Home Image](/Mockups/Manage_Dates.png)
