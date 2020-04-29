@@ -37,8 +37,11 @@ class App(Tk):
         labelFrameHome2 = LabelFrame(self.tab1, text="Generate Date")
         labelFrameHome2.grid(column=1, row=0, padx=8, pady=4)
 
-        btn2 = Button(labelFrameHome2, text='Randomize')
-        btn2.grid(column=0, row=0, padx=4, pady=2)
+        lbl = Label(labelFrameHome2, text="Datr", font=(
+            "Arial Bold", 20))  # Creates a label
+
+        lbl.grid(column=0, row=0, padx=4, pady=2)
+
         label = Label(labelFrame, text="Enter Your Name:")
         label.grid(column=0, row=0, sticky='W')
 
