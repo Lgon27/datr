@@ -38,32 +38,39 @@ class App(Tk):
         labelFrameHome2.grid(column=1, row=0, padx=8, pady=4)
 
         lbl = Label(labelFrameHome2, text="Datr", font=(
-            "Arial Bold", 20))  # Creates a label
+            "Arial Bold", 11))  # Creates a label
 
         lbl.grid(column=0, row=0, padx=4, pady=2)
 
-        label = Label(labelFrame, text="Enter Your Name:")
+        label = Label(labelFrame, text="Enter Date Name:")
         label.grid(column=0, row=0, sticky='W')
 
         textEdit = Entry(labelFrame, width=20)
         textEdit.grid(column=1, row=0)
 
-        label2 = Label(labelFrame, text="Enter Your Password:")
+        label2 = Label(labelFrame, text="Enter Date Cost:")
         label2.grid(column=0, row=1)
 
         textEdit = Entry(labelFrame, width=20)
         textEdit.grid(column=1, row=1)
 
+        label3 = Label(labelFrame, text="Enter Date Distance:")
+        label3.grid(column=0, row=2)
+
+        textEdit = Entry(labelFrame, width=20)
+        textEdit.grid(column=1, row=2)
+
+
         labelFrame2 = LabelFrame(self.tab3, text="Second Tab")
         labelFrame2.grid(column=0, row=0, padx=8, pady=4)
 
-        label = Label(labelFrame2, text="Enter Your Name:")
+        label = Label(labelFrame2, text="Enter Food Name:")
         label.grid(column=0, row=0, sticky='W')
 
         textEdit = Entry(labelFrame2, width=20)
         textEdit.grid(column=1, row=0)
 
-        label2 = Label(labelFrame2, text="Enter Your Password:")
+        label2 = Label(labelFrame2, text="Enter Food Cost:")
         label2.grid(column=0, row=1)
 
         textEdit = Entry(labelFrame2, width=20)
